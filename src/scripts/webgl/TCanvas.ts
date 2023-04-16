@@ -36,6 +36,8 @@ export class TCanvas {
         sandbox.resize()
       })
     })
+
+    controls.primitive.enablePan = false
   }
 
   private createScreens() {

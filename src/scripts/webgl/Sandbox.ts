@@ -3,12 +3,13 @@ import { gl } from './core/WebGL'
 
 export class Sandbox {
   private scene = new THREE.Scene()
-  private renderTarget = new THREE.WebGLRenderTarget(gl.size.width, gl.size.height, {
+  private renderTarget = new THREE.WebGLRenderTarget(gl.size.width * window.devicePixelRatio, gl.size.height * window.devicePixelRatio, {
     samples: 10,
   })
 
   constructor(private object: THREE.Object3D) {
     this.scene.add(object)
+
     this.createLights()
     this.createStage()
   }
@@ -52,7 +53,7 @@ export class Sandbox {
   }
 
   resize() {
-    this.renderTarget.setSize(gl.size.width, gl.size.height)
+    this.renderTarget.setSize(gl.size.width * window.devicePixelRatio, gl.size.height * window.devicePixelRatio)
   }
 
   update() {
