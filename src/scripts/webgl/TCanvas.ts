@@ -30,7 +30,6 @@ export class TCanvas {
     gl.setup(this.container)
     gl.scene.background = new THREE.Color('#0a0a0a')
     gl.camera.position.set(0, 0, 5)
-
     gl.setResizeCallback(() => {
       this.sandboxes.forEach((sandbox) => {
         sandbox.resize()
