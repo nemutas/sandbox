@@ -40,7 +40,7 @@ export class Sandbox {
   private createStage() {
     const geo = new THREE.BoxGeometry(2, 2, 2)
     const mat = new THREE.MeshStandardMaterial({
-      color: '#0f0f0f',
+      color: '#181818',
       side: THREE.BackSide,
     })
     const mesh = new THREE.Mesh(geo, mat)

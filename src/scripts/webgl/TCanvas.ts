@@ -113,11 +113,11 @@ export class TCanvas {
     const frame = (this.assets.frame.data as GLTF).scene.children[0] as THREE.Mesh
     const envMap = this.assets.envMap.data as THREE.Texture
     frame.material = new THREE.MeshStandardMaterial({
-      color: '#aa0',
+      color: '#dfad23',
       envMap,
       envMapIntensity: 0.2,
       metalness: 1,
-      roughness: 0.2,
+      roughness: 0.15,
     })
     frame.scale.multiplyScalar(0.995)
     gl.scene.add(frame)
